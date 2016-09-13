@@ -1,0 +1,23 @@
+app_homepage:
+    path:      /
+    defaults:  { _controller: AppBundle:Default:index }
+
+app_access:
+    path:      /acceder
+    defaults:  { _controller: AppBundle:Default:access }
+
+app_register:
+    path:      /registro
+    defaults:  { _controller: AppBundle:Default:register }
+
+app_registerconfirmation:
+    path:      /confirmacion-registro
+    defaults:  { _controller: AppBundle:Default:registerconf }
+
+app_recover:
+    path:      /envioemail
+    defaults:  { _controller: AppBundle:Default:recover }
+    
+app_verify:
+    path:      /verificaemail
+    defaults:  { _controller: AppBundle:Default:verify }
