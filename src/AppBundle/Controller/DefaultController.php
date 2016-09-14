@@ -31,10 +31,10 @@ class DefaultController extends Controller
         ));
     }
     
-    public function registerconfAction(Request $request)
+    public function confirmationAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('default/registerconf.html.twig', array(
+        return $this->render('default/confirmation.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ));
     }
@@ -42,6 +42,13 @@ class DefaultController extends Controller
     {
         // replace this example code with whatever you need
         return $this->render('default/recover.html.twig', array(
+            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
+        ));
+    }
+    public function sendAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('default/send.html.twig', array(
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ));
     }

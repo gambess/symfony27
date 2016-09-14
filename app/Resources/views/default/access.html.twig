@@ -1,14 +1,8 @@
 {% extends 'base.html.twig' %}
 
-
-{% block javascripts %}
-    <SCRIPT type="text/javascript" lang="javascript" src="http://cdn.gigya.com/JS/gigya.js?apikey=3_SWfA3quE2TX6I-dCbvZrLE1FGiJQlU3Dbu3e_-8yBV5smt7Sh0m9ZWkp6tbxs5Xt"></SCRIPT>
-{% endblock %}
-
-
 {% block body %}
     <script type="text/javascript">
-        gigya.accounts.showScreenSet({screenSet:'razielColl-RegistrationLogin', startScreen:'gigya-login-screen' , containerID:'layer', authFlow: 'redirect', redirectURL:'http://symfony.raziellocal/'});
+        gigya.accounts.showScreenSet({screenSet:'vClient-RegistrationLogin', startScreen:'gigya-login-screen' , containerID:'layer', authFlow: 'redirect', redirectURL:'http://vocento.localhost/', redirectMethod:'post'});
     </script>
     <div id="layer"></div>
 {% endblock %}
