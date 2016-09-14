@@ -2,7 +2,10 @@
 
 {% block body %}
     <script type="text/javascript">
-        gigya.accounts.showScreenSet({screenSet:'vClient-RegistrationLogin', startScreen:'gigya-forgot-password-screen', containerID:'layer', authFlow:'redirect', redirectURL:'http://vocento.localhost/enviaremail', redirectMethod:'post' });
+        function redirectPage (eventObj){
+            window.location.href = '/enviaremail';
+        }
+        gigya.accounts.showScreenSet({screenSet:'vClient-RegistrationLogin', startScreen:'gigya-forgot-password-screen', containerID:'layer', onAfterSubmit:redirectPage});
     </script>
     <div id="layer"></div>
 {% endblock %}
